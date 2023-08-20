@@ -1,0 +1,13 @@
+<h1><i class="bi" 
+    [class.bi-bookmark-star-fill]="isSelected"
+    [class.bi-bookmark-star]="!isSelected"
+     (click)="onClick()"></i>{{title}}</h1>
+<h3><i class="bi" 
+    [class.bi-star-fill]="isSelected"
+    [class.bi-star]="!isSelected"
+     (click)="onClick()"></i>{{courses.length}} Courses</h3>
+<ul>
+    <li *ngFor="let course of courses">{{course}}</li>
+</ul>
+<input type="text" [(ngModel)]="message"/>
+<h1>{{message | customCase}}</h1>
